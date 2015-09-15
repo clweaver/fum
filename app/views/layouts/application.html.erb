@@ -13,8 +13,10 @@
   <div class="row">
     <div class="col-md-12">
       <%= render partial: 'shared/header' %>
-      <%= render partial: 'shared/footer' %>
+      <div class="notice"><%= notice %></div>
+      <div class="alert"><%= alert %></div>
       <%= yield %>
+      <%= render partial: 'shared/footer' %>
     </div>
   </div>
 </div>
