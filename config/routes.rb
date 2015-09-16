@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   get 'drummer/index'
+  get 'drummer/show'
+
 
   root 'home#index'
 
