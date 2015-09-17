@@ -27,8 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'devise', '~> 3.5.2'
 gem 'devise_invitable', '~> 1.5.2'
-gem 'formtastic', '~> 3.1.3'
 gem 'activeadmin', github: 'activeadmin'
+gem 'simple_form'
+
 
 
 # Use ActiveModel has_secure_password

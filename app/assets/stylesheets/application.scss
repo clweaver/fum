@@ -5,9 +5,20 @@ body {
   padding-top: 75px;
   padding-left: 75px;
   padding-right: 75px;
+  padding-bottom: 75px;
 }
 
-#drummer-panel {
+.jumbotron :hover {
+}
+
+#main-bio-text {
+  text-align: justify;
+}
+
+
+#browse-body {
+  padding: 20px;
+  background-color: #eeeeee;
 }
 
 #search {
