@@ -1,8 +1,5 @@
 ActiveAdmin.register Drummer do
 
-index do
-  column :name
-end
-
+  permit_params :name, :bio
 
 end
