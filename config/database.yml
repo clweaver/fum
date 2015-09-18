@@ -5,8 +5,8 @@ common: &common
 
 development:
   <<: *common
-  database: fum_development
+  database: fum-rep_development
 
 test:
   <<: *common
-  database: fum_test
+  database: fum-rep_test

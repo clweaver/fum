@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get 'drummer/index'
   get 'drummer/show'
+  get 'bassist/index'
+  get 'keyboardist/index'
+
 
 
   root 'home#index'
