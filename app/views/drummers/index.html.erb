@@ -1,3 +1,16 @@
+<div class="jumbotron">
+  <div class="container-fluid">
+    <h1>Favorite Drummers</h1>
+
+    <p>
+      Welcome to Fum, an extensive directory of drummers. Find out about your favorite drummers, explore drummers, share
+      and on and on and on...
+    </p>
+
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Sig Up</a></p>
+  </div>
+</div>
+
 <div class="container-fluid" id="browse-body">
 
   <% @drummers.each do |drummer| %>
@@ -8,6 +21,11 @@
           <h3><%= drummer.name %></h3>
 
           <p><%= drummer.bio %></p>
+
+          <h4>Drumkit Make</h4>
+
+          <p><%= drummer.drumkit %></p>
+
           <a href="#" class="btn btn-primary" role="button">Read More</a>
         </div>
       </div>
@@ -15,3 +33,7 @@
   <% end %>
 
 </div>
+
+
+
+
