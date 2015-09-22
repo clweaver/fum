@@ -1,0 +1,17 @@
+<div class="container-fluid" id="browse-body">
+
+  <% @drummers.each do |drummer| %>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <%= image_tag "carter_beauford.jpg", alt: "Carter Beauford" %>
+        <div class="caption">
+          <h3><%= drummer.name %></h3>
+
+          <p><%= drummer.bio %></p>
+          <a href="#" class="btn btn-primary" role="button">Read More</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>
