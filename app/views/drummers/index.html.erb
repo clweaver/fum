@@ -22,7 +22,7 @@
           <div class="caption">
             <h3><%= drummer.name %></h3>
 
-            <p><%= drummer.bio %></p>
+            <p><%= truncate(drummer.bio, :omission => "...", :length => 150) %></p>
 
             <h4><strong>Drumkit Make</strong></h4>
 
