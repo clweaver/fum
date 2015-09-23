@@ -29,6 +29,8 @@ gem 'devise', '~> 3.5.2'
 gem 'devise_invitable', '~> 1.5.2'
 gem 'activeadmin', github: 'activeadmin'
 gem 'simple_form'
+gem 'carrierwave'
+
 
 
 

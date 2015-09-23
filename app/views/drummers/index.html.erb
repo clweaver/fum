@@ -1,13 +1,15 @@
-<div class="jumbotron">
-  <div class="container-fluid">
-    <h1>Favorite Drummers</h1>
+<div class="container-fluid">
+  <div class="col-md-12">
+    <div class="jumbotron">
+      <h1>Favorite Drummers</h1>
 
-    <p>
-      Welcome to Fum, an extensive directory of drummers. Find out about your favorite drummers, explore drummers, share
-      and on and on and on...
-    </p>
+      <p>
+        Welcome to Fum, an extensive directory of drummers. Find out about your favorite drummers, explore drummers, share
+        and on and on and on...
+      </p>
 
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Sig Up</a></p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a></p>
+    </div>
   </div>
 </div>
 
@@ -15,20 +17,23 @@
 
   <% @drummers.each do |drummer| %>
     <div class="col-md-4">
-      <div class="thumbnail">
-        <%= image_tag "carter_beauford.jpg", alt: "Carter Beauford" %>
-        <div class="caption">
-          <h3><%= drummer.name %></h3>
+        <div class="thumbnail">
+          <%= image_tag "carter_beauford.jpg", alt: "Carter Beauford" %>
+          <div class="caption">
+            <h3><%= drummer.name %></h3>
 
-          <p><%= drummer.bio %></p>
+            <p><%= drummer.bio %></p>
 
-          <h4>Drumkit Make</h4>
+            <h4><strong>Drumkit Make</strong></h4>
 
-          <p><%= drummer.drumkit %></p>
+            <p><%= drummer.drumkit %></p>
 
-          <a href="#" class="btn btn-primary" role="button">Read More</a>
+          <%= link_to "Read More", drummers_show_path, :class => "btn btn-primary" %>
+
+
         </div>
       </div>
+
     </div>
   <% end %>
 

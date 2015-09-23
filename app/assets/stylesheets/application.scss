@@ -1,6 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* ED174C, 006BB6, 002B5C, C4CED3 */
+
+.navbar {
+  background-color: #002B5C;
+}
+
 body {
   padding-top: 75px;
   padding-left: 75px;
@@ -8,17 +14,18 @@ body {
   padding-bottom: 75px;
 }
 
-.jumbotron :hover {
+#side-tron {
+  background: white;
+  color: #ED174C;
+  border: solid #ED174C;;
 }
 
 #main-bio-text {
   text-align: justify;
 }
 
-
 #browse-body {
   padding: 20px;
-  background-color: #eeeeee;
 }
 
 #search {
@@ -27,22 +34,24 @@ body {
 
 .thumbnail {
   border: none;
+
+}
+
+.thumbnail :hover {
 }
 
 .nav-pills {
   padding-top: 5px;
 }
 
-
-
-/* .jumbotron{
-  background: url("dave_grohl_big.jpg") no-repeat center center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
+.drummer-tab :hover {
+  border-radius: 10px;
 }
-*/
+
+.jumbotron {
+  background: #ED174C;
+  color: white;
+}
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
 
   get '/drummers' => 'drummers#index', as: :drummers
+  get '/drummers/show' => 'drummers#show', as: :drummers_show
+
 
 
 

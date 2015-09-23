@@ -4,4 +4,7 @@ class DrummersController < ApplicationController
     @drummers = Drummer.all
   end
 
+  def show
+  end
+
 end

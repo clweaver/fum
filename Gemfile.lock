@@ -71,6 +71,11 @@ GEM
       thor (~> 0.19)
     builder (3.2.2)
     byebug (6.0.2)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -215,6 +220,7 @@ DEPENDENCIES
   activeadmin!
   bootstrap-sass (~> 3.3.5.1)
   byebug
+  carrierwave
   coffee-rails (~> 4.1.0)
   devise (~> 3.5.2)
   devise_invitable (~> 1.5.2)
