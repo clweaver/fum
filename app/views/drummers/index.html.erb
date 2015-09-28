@@ -15,8 +15,9 @@
 
 <div class="container-fluid" id="browse-body">
 
-  <% @drummers.each do |drummer| %>
-    <div class="col-md-4">
+  <div class="drummer-tab">
+    <% @drummers.each do |drummer| %>
+      <div class="col-md-4">
         <div class="thumbnail">
           <%= image_tag "carter_beauford.jpg", alt: "Carter Beauford" %>
           <div class="caption">
@@ -28,14 +29,16 @@
 
             <p><%= drummer.drumkit %></p>
 
-          <%= link_to "Read More", drummers_show_path, :class => "btn btn-primary" %>
+            <%= link_to "Read More", drummers_show_path, :class => "btn btn-primary" %>
 
 
+          </div>
         </div>
-      </div>
 
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
+
 
 </div>
 
