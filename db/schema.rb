@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150918144731) do
-=======
-ActiveRecord::Schema.define(version: 20150918193347) do
->>>>>>> 2e393b8a650bed435390b8f725f8cdf4b5ae5fb7
+ActiveRecord::Schema.define(version: 20150928224158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +63,8 @@ ActiveRecord::Schema.define(version: 20150918193347) do
     t.datetime "updated_at"
     t.string   "drumkit"
     t.string   "cymbals"
+    t.string   "hardware"
+    t.string   "sticks"
   end
 
   create_table "keyboardists", force: :cascade do |t|

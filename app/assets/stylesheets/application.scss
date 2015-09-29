@@ -48,6 +48,18 @@ body {
   color: white;
 }
 
+.btn-primary {
+  background-color: #006BB6;
+  border-color: transparent;
+  color: white;
+}
+
+  .btn-primary:hover {
+    background-color: white;
+    border-color: #ED174C;
+    color: #ED174C;
+}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
