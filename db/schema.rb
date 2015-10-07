@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929140800) do
+ActiveRecord::Schema.define(version: 20151007133824) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,9 +49,14 @@ ActiveRecord::Schema.define(version: 20150929140800) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["unlock_token"], name: "index_admin_users_on_unlock_token", unique: true, using: :btree
 
-  create_table "bassists", force: :cascade do |t|
+  create_table "cymbal_brands", force: :cascade do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "name"
-    t.text     "bio"
+  end
+
+  create_table "drumkits", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -61,18 +66,13 @@ ActiveRecord::Schema.define(version: 20150929140800) do
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "drumkit"
-    t.string   "cymbals"
-    t.string   "hardware"
-    t.string   "sticks"
-    t.string   "genre"
+    t.integer  "drumkit_id"
   end
 
-  create_table "keyboardists", force: :cascade do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "name"
-    t.text     "bio"
+  add_index "drummers", ["drumkit_id"], name: "index_drummers_on_drumkit_id", using: :btree
+
+  create_table "relationship_between_drummers_and_cymbal_brands", force: :cascade do |t|
   end
 
+  add_foreign_key "drummers", "drumkits"
 end
