@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007133824) do
+ActiveRecord::Schema.define(version: 20151013151612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "a_sticks_tables", force: :cascade do |t|
+    t.string   "name"
+    t.text     "background"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -67,12 +74,39 @@ ActiveRecord::Schema.define(version: 20151007133824) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "drumkit_id"
+    t.integer  "stick_id"
+    t.integer  "genre_id"
   end
 
   add_index "drummers", ["drumkit_id"], name: "index_drummers_on_drumkit_id", using: :btree
+  add_index "drummers", ["genre_id"], name: "index_drummers_on_genre_id", using: :btree
+  add_index "drummers", ["stick_id"], name: "index_drummers_on_stick_id", using: :btree
+
+  create_table "genre_tables", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "background"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "background"
+  end
 
   create_table "relationship_between_drummers_and_cymbal_brands", force: :cascade do |t|
   end
 
+  create_table "sticks", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "background"
+  end
+
   add_foreign_key "drummers", "drumkits"
+  add_foreign_key "drummers", "genres"
+  add_foreign_key "drummers", "sticks"
 end
