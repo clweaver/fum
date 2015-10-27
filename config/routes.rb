@@ -9,12 +9,12 @@ Rails.application.routes.draw do
 
 
   get '/drummers' => 'drummers#index', as: :drummers
-  get '/drummers/show' => 'drummers#show', as: :drummers_show
+  get '/drummers/:id' => 'drummers#show', as: :drummer
 
 
 
 
-  root 'home#index'
+  root 'drummers#index'
 
 
 end

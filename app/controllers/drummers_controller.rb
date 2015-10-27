@@ -4,11 +4,8 @@ class DrummersController < ApplicationController
     @drummers = Drummer.all
   end
 
-  def index
-    @cymbals = Cymbal_brand.all
-  end
-
   def show
+    @drummer = Drummer.find(params[:id])
   end
 
 end

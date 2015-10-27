@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013151612) do
+ActiveRecord::Schema.define(version: 20151027203318) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,15 +69,18 @@ ActiveRecord::Schema.define(version: 20151013151612) do
   end
 
   create_table "drummers", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.string   "name",            null: false
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "drumkit_id"
     t.integer  "stick_id"
     t.integer  "genre_id"
+    t.integer  "cymbal_brand_id"
+    t.string   "photo"
   end
 
+  add_index "drummers", ["cymbal_brand_id"], name: "index_drummers_on_cymbal_brand_id", using: :btree
   add_index "drummers", ["drumkit_id"], name: "index_drummers_on_drumkit_id", using: :btree
   add_index "drummers", ["genre_id"], name: "index_drummers_on_genre_id", using: :btree
   add_index "drummers", ["stick_id"], name: "index_drummers_on_stick_id", using: :btree
@@ -106,6 +109,7 @@ ActiveRecord::Schema.define(version: 20151013151612) do
     t.text     "background"
   end
 
+  add_foreign_key "drummers", "cymbal_brands"
   add_foreign_key "drummers", "drumkits"
   add_foreign_key "drummers", "genres"
   add_foreign_key "drummers", "sticks"

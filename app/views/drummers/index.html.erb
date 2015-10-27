@@ -13,13 +13,13 @@
   </div>
 </div>
 
-<div class="container-fluid" id="browse-body">
+<div id="browse-body">
 
   <div class="drummer-tab">
     <% @drummers.each do |drummer| %>
       <div class="col-md-4">
         <div class="thumbnail">
-          <%= image_tag "carter_beauford.jpg", alt: "Carter Beauford" %>
+          <%= image_tag drummer.photo.url, alt: drummer.name %>
           <div class="caption">
             <h3><%= drummer.name %></h3>
 
@@ -27,17 +27,19 @@
 
             <h4><strong>Drumkit Make</strong></h4>
 
-            <p><%= drummer.drumkit %></p>
+            <p><%= drummer.drumkit.name if drummer.drumkit %></p>
 
 
             <h4><strong>Cymbals</strong></h4>
-            <%= drummmer.cymbal_brand %>
+            <p><%= drummer.cymbal_brand.name if drummer.cymbal_brand %></p>
+
 
 
             <h4><strong>Sticks</strong></h4>
+            <p><%= drummer.stick.name if drummer.stick %></p>
 
 
-           <%= link_to "Read More", drummers_show_path, :class => "btn btn-primary" %>
+           <%= link_to "Read More", drummer_path(drummer), :class => "btn btn-primary" %>
 
           </div>
         </div>
